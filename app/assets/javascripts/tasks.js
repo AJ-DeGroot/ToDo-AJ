@@ -33,8 +33,9 @@ $(function() {
     }).success(function(data) {
       var liHtml = taskHtml(data);
       var $li = $("#listItem-" + data.id);
-      $li.replaceWith(liHtml)
+      $li.replaceWith(liHtml);
       $('.toggle').change(toggleTask);
+
     } );
   }
 
@@ -65,6 +66,7 @@ $(function() {
       var ulTodos = $('.todo-list');
       ulTodos.append(htmlString);
       $('.toggle').click(toggleTask);
+      $('.new-todo').val('');
     });
   });
 
